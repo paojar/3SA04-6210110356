@@ -10,4 +10,5 @@ export default function Forecast(props) {
         <Text>°C</Text>
     </View>
     )
-   }
+}
+
