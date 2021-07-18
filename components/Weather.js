@@ -1,8 +1,10 @@
 import React from 'react';
-import { Text,ImageBackground,StyleSheet } from 'react-native';
+import { Text,ImageBackground,StyleSheet,SafeAreaView } from 'react-native';
 import Forecast from './Forecast';
 import { useEffect } from 'react';
 import { useState } from 'react';
+
+
 
 export default function Weather(props) {
     useEffect(() => {
@@ -36,12 +38,12 @@ export default function Weather(props) {
     })
 
     return (
-    
-    <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
-        <Text>Zip Code is {props.zipCode}</Text>
-        <Forecast {...forecastInfo} />
-    </ImageBackground>
-    
+    <SafeAreaView style={styles.containerbg}>
+        <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
+            <Text>Zip Code is {props.zipCode}</Text>
+            <Forecast {...forecastInfo} />
+        </ImageBackground>
+    </SafeAreaView>
     );
 
 }
@@ -55,4 +57,5 @@ const styles = StyleSheet.create({
         height: '100%'
         
     },
+    
 })
