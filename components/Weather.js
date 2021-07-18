@@ -16,7 +16,7 @@ export default function Weather(props) {
                         description: json.weather[0].description,
                         temp: json.main.temp,
                         feels_like: json.main.feels_like, 
-                        
+                        icon: json.weather[0].icon
                     });
                 })
                 .catch((error) => {
@@ -30,7 +30,7 @@ export default function Weather(props) {
         description: '-',
         temp: 0,
         feels_like : 0,
-        
+        icon: '-'
     })
 
     return (
