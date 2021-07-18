@@ -21,19 +21,18 @@ const ZipItem = ({place, code, navigation}) => (
     </TouchableHighlight>
 )
 
-//const _keyExtractor = item => item.code
+
 
 export default function ZipCodeScreen(){
     const navigation = useNavigation()
     return (
-        //<View>
+        
         <FlatList
             data={availableZipItems}
             keyExtractor={item => item.code}
             renderItem={({item}) => <ZipItem {...item} navigation={navigation} />}
         />
-        //<StatusBar style="auto" />
-        //</View>
+        
     );
    
 }
