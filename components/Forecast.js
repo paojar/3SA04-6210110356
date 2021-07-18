@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
 export default function Forecast(props) {
     return (
     <View >
+        <Text>{props.name}</Text>
         <Text>{props.main}</Text>
         <Image 
         style={styles.tinyLogo}
